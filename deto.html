@@ -6,36 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deto No Yoru</title>
-    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="../Deto_No_Yoru/CSS/styles.css">
 </head>
 
 <body>
 
+    <!-- Search Container -->
     <div id='intro'>
         <h1>デートの夜</h1>
         <h2>Deto No Yoru</h2>
-        <p>Never know what to watch or eat? Make your date nights easier with Deto No Yoru! Simply select an Anime genre
+        <p>Never know what to watch or eat? Make your date nights easier with Deto No Yoru! Simply select an Anime
+            genre
             and
             enter your zipcode and our team of super smart robots will generate the perfect date night for you!</p>
-    </div>
 
-    <div id='search_form'>
-        <div id='anime_search_form'>
-            <select id='anime_select'>
-                <option selected>Select an Anime Genre</option>
-                <option>One</option>
-            </select>
-        </div>
+        <select id='anime_select'>
+            <option selected>Select an Anime Genre</option>
+            <option>One</option>
+        </select>
 
-        <div id='zipcode_search_form'>
+        <form>
             <input type='number' id='zipcode' placeholder='Enter Your Zipcode'>
-        </div>
-        <div id='search_button'>
-            <button type='button'>Search!</button>
-        </div>
+        </form>
+        <button type='button'>Search!</button>
     </div>
 
+    <!-- Restaurant Results -->
+    <div id='restaurant_results'>
+        <h2>What's On The Menu Tonight!</h2>
+    </div>
 
+    <!-- Anime Results -->
+    <div id='anime_results'>
+        <h2>Anime to Watch</h2>
+    </div>
 
     <script src='/JS/script.js'></script>
 </body>
