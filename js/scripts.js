@@ -27,23 +27,23 @@ document.addEventListener('DOMContentLoaded', function () {
         // Restaurant Name
         const restaurantName = document.createElement('p');
         restaurantName.innerText = restaurants.data[random].restaurant_name;
-        restaurantContainer.appendChild(restaurantName);
+        restaurantContainer.append(restaurantName);
 
         // Restaurant Phone number
         const restaurantNumber = document.createElement('p');
         restaurantNumber.innerText = restaurants.data[random].restaurant_phone;
-        restaurantContainer.appendChild(restaurantNumber);
+        restaurantContainer.append(restaurantNumber);
 
         // Restaurant Address:
         const restaurantAddress = document.createElement('p');
         restaurantAddress.innerText = restaurants.data[random].address.formatted;
-        restaurantContainer.appendChild(restaurantAddress);
+        restaurantContainer.append(restaurantAddress);
 
         // Restaurant Website:
         const restaurantWebsite = document.createElement('a');
         restaurantWebsite.setAttribute('href', restaurants.data[random].restaurant_website);
         restaurantWebsite.innerText = "VIEW MENU";
-        restaurantContainer.appendChild(restaurantWebsite);
+        restaurantContainer.append(restaurantWebsite);
 
     }
 
@@ -93,21 +93,19 @@ document.addEventListener('DOMContentLoaded', function () {
         //Anime Title
         const animeTitle = document.createElement('p');
         animeTitle.innerText = animeList.anime[randomAnime].title;
-        animeInfoContainer.appendChild(animeTitle);
+        animeInfoContainer.append(animeTitle);
 
         //Anime Synopsis
         const animeSynopsis = document.createElement('p');
         animeSynopsis.innerText = animeList.anime[randomAnime].synopsis;
-        //  //Removes the [Written by MAL Rewrite text]:
-        // animeSynopsis.innerText.replace(/[Written by MAL Rewrite]/, "");
-        animeInfoContainer.appendChild(animeSynopsis);
+        animeInfoContainer.append(animeSynopsis);
        
 
         // Learn More Button
         const learnMoreBtn = document.createElement('a');
         learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url)
         learnMoreBtn.innerText = "LEARN MORE";
-        animeInfoContainer.appendChild(learnMoreBtn);
+        animeInfoContainer.append(learnMoreBtn);
         
         const imageContainer = document.querySelector('#imageContainer');
 
@@ -118,11 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
         imageContainer.append(animeImage);
     }
 
-    // Clears all three divs with each search: STILL WORKING ON THIS
+    // Clears all three divs with each search:
     function clearContent() {
-        document.querySelector('#restaurantContainer').innerHTMl = '';
-        document.querySelector('#animeInfoContainer').innerHTMl = '';
-        document.querySelector('#imageContainer').innerHTMl = '';
+        document.getElementById('restaurantContainer').innerHTML = '';
+        document.getElementById('animeInfoContainer').innerHTML = '';
+        document.getElementById('animeImage').innerHTML = '';
     }
 
     const mainBtn = document.getElementById('mainBtn');
