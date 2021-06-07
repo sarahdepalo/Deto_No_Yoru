@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
         //Anime Synopsis
         const animeSynopsis = document.createElement('p');
         animeSynopsis.innerText = animeList.anime[randomAnime].synopsis;
-         //Removes the [Written by MAL Rewrite text]:
-        animeSynopsis.innerText.replace("[Written by MAL Rewrite]", "");
+        //  //Removes the [Written by MAL Rewrite text]:
+        // animeSynopsis.innerText.replace(/[Written by MAL Rewrite]/, "");
         animeInfoContainer.appendChild(animeSynopsis);
        
 
@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Takes the selected genre and sends it to grabGenre
         const genreChoice = document.querySelector('select').value;
+        clearContent();
         fetchRestaurants(zipCode);
         grabGenre(genreChoice);
        
