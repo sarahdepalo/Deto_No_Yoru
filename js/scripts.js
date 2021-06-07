@@ -21,7 +21,30 @@ document.addEventListener('DOMContentLoaded', function () {
         const random = Math.floor(Math.random() * restaurants.data.length);
         // Use restaurants.data[random].restaurant_name structure to grab data
         console.log(restaurants.data[random]);
-        // need to add pieces here to update innerHTML
+
+        const restaurantContainer = document.querySelector('#restaurantContainer');
+
+        // Restaurant Name
+        const restaurantName = document.createElement('p');
+        restaurantName.innerText = restaurants.data[random].restaurant_name;
+        restaurantContainer.appendChild(restaurantName);
+
+        // Restaurant Phone number
+        const restaurantNumber = document.createElement('p');
+        restaurantNumber.innerText = restaurants.data[random].restaurant_phone;
+        restaurantContainer.appendChild(restaurantNumber);
+
+        // Restaurant Address:
+        const restaurantAddress = document.createElement('p');
+        restaurantAddress.innerText = restaurants.data[random].address.formatted;
+        restaurantContainer.appendChild(restaurantAddress);
+
+        // Restaurant Website:
+        const restaurantWebsite = document.createElement('a');
+        restaurantWebsite.setAttribute('href', restaurants.data[random].restaurant_website);
+        restaurantWebsite.innerText = "VIEW MENU";
+        restaurantContainer.appendChild(restaurantWebsite);
+
     }
 
 
@@ -40,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             genre = 22;
         }
         else {
-            console.log('hello')
+            console.log('Error')
         }
         fetchAnime(genre);
 
@@ -53,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(function(animeList) {
             randomizeAnime(animeList)
-            // console.log(animeList);
+            
         })
         .catch(function (error) {
             console.error("ERROR: ", error);
@@ -61,9 +84,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function randomizeAnime(animeList) {
+        //grabs random Anime
         const randomAnime = Math.floor(Math.random() * animeList.anime.length);
         console.log(animeList.anime[randomAnime]);
-        // Still need to add in the pieces to update innerHTML
+
+        const animeInfoContainer = document.querySelector('#animeInfoContainer')
+
+        //Anime Title
+        const animeTitle = document.createElement('p');
+        animeTitle.innerText = animeList.anime[randomAnime].title;
+        animeInfoContainer.appendChild(animeTitle);
+
+        //Anime Synopsis
+        const animeSynopsis = document.createElement('p');
+        animeSynopsis.innerText = animeList.anime[randomAnime].synopsis;
+         //Removes the [Written by MAL Rewrite text]:
+        animeSynopsis.innerText.replace("[Written by MAL Rewrite]", "");
+        animeInfoContainer.appendChild(animeSynopsis);
+       
+
+        // Learn More Button
+        const learnMoreBtn = document.createElement('a');
+        learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url)
+        learnMoreBtn.innerText = "LEARN MORE";
+        animeInfoContainer.appendChild(learnMoreBtn);
+        
+        const imageContainer = document.querySelector('#imageContainer');
+
+        //Anime Image
+        const animeImage = document.querySelector('#animeImage');
+        const imageSrc = animeList.anime[randomAnime].image_url;
+        animeImage.src = imageSrc;
+        imageContainer.append(animeImage);
+    }
+
+    // Clears all three divs with each search: STILL WORKING ON THIS
+    function clearContent() {
+        document.querySelector('#restaurantContainer').innerHTMl = '';
+        document.querySelector('#animeInfoContainer').innerHTMl = '';
+        document.querySelector('#imageContainer').innerHTMl = '';
     }
 
     const mainBtn = document.getElementById('mainBtn');
@@ -75,9 +134,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Takes the selected genre and sends it to grabGenre
         const genreChoice = document.querySelector('select').value;
-
-        fetchRestaurants(zipCode)
+        fetchRestaurants(zipCode);
         grabGenre(genreChoice);
+       
     })
     
 
