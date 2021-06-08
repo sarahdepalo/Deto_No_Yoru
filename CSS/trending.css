@@ -1,0 +1,147 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+
+.intro-container {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 70%;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.anime-container {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 70%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.anime-container img {
+    display: block;
+    align-self: center;
+    padding: 15px;
+
+}
+.col {
+    width:200px;
+   
+}
+
+.col h2 {
+    font-size: 30px;
+}
+
+.col h3 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    font-size: 30px;
+}
+
+.neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+    font-size: 45px;
+    margin-top: -10px;
+}
+
+/* Flickering animation for ratings number */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+/* Button Styles */
+
+.learnMoreBtn {
+    background-color:#FF10F0;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+a.learnMoreBtn:hover {
+    background-color:purple;
+}
+
+/* Responsiveness */ 
+
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.2rem;} } 
+
+@media screen and (max-width: 960px),
+only screen and (max-width: 768px) {
+    main {
+        margin: 0 auto;
+        width: auto;
+       
+    }
+    .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: auto;
+     
+    }
+
+    .anime-container, .intro-container {
+        flex-wrap: wrap;
+        width: auto;
+        margin: 5px;
+    }
+
+    .intro-container p {
+        padding: 5px;
+    }
+    .col {
+        flex-direction: row;
+        align-self: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .col img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+  }
