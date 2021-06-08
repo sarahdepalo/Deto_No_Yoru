@@ -1,11 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 main {
     width: 1060px;
     margin: 0 auto;
 }
+
+/* Navbar styles */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    opacity: 70%;
+    color: white;
+   
+    
+}
+
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+
+.navbar-links li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links:hover {
+    color: #ff40f3;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%; 
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Main Styles */
 
 .container {
     display:flex;
@@ -93,7 +152,7 @@ main {
 
 .learnMoreBtn {
     background-color:none;
-    border: 3px solid #FF10F0;
+    border: 2px solid #FF10F0;
     color: #FF10F0;
     padding: 10px 15px;
     display: inline-block;
@@ -151,6 +210,33 @@ a.learnMoreBtn:hover {
        
     }
 
+    /* Hamburger Menu Styles */
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display:none;
+        width: 100%
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
   }
 
   /* iPad Specific Responsiveness */
