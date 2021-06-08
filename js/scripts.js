@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-
     function grabGenre(genreChoice) {
         // Matches the genre with the number from Jikan
         let genre = 0;
@@ -56,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
             genre = 14;
         } else if (genreChoice === "romance") {
             genre = 22;
+        } else if (genreChoice === "fantasy") {
+            genre = 10;
         }
         else {
             console.log('Error')
