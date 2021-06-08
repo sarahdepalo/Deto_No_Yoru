@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -39,11 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         restaurantAddress.innerText = restaurants.data[random].address.formatted;
         restaurantContainer.append(restaurantAddress);
 
-        // Restaurant Website:
-        const restaurantWebsite = document.createElement('a');
-        restaurantWebsite.setAttribute('href', restaurants.data[random].restaurant_website);
-        restaurantWebsite.innerText = "VIEW MENU";
-        restaurantContainer.append(restaurantWebsite);
 
     }
 
@@ -103,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Learn More Button
         const learnMoreBtn = document.createElement('a');
-        learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url)
+        learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url);
+        learnMoreBtn.setAttribute('target', '_blank');
         learnMoreBtn.innerText = "LEARN MORE";
         animeInfoContainer.append(learnMoreBtn);
         
