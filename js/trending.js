@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createResults(anime) {
         const animeList = anime.top;
         //changes the array length from 50 to 25:
-        animeList.length = 25;
+        animeList.length = 20;
         console.log(anime.top);
 
         animeList.forEach(function (anime) {
