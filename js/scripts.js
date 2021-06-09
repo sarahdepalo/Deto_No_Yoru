@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(function (error) {
                 console.error("ERROR: ", error);
             })
-        
+
     }
     function radomizeRestaurants(restaurants) {
         // Randomizes the restaurants.data array
@@ -39,15 +39,21 @@ document.addEventListener('DOMContentLoaded', function () {
         restaurantAddress.innerText = restaurants.data[random].address.formatted;
         restaurantContainer.append(restaurantAddress);
 
+        // Restaurant Website:
+        const restaurantWebsite = document.createElement('a');
+        restaurantWebsite.setAttribute('href', restaurants.data[random].restaurant_website);
+        restaurantWebsite.innerText = "VIEW MENU";
+        restaurantContainer.append(restaurantWebsite);
 
     }
+
 
     function grabGenre(genreChoice) {
         // Matches the genre with the number from Jikan
         let genre = 0;
         if (genreChoice === "action") {
             genre = 1;
-        }  else if (genreChoice === "comedy") {
+        } else if (genreChoice === "comedy") {
             genre = 4;
         } else if (genreChoice === "drama") {
             genre = 8;
@@ -55,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
             genre = 14;
         } else if (genreChoice === "romance") {
             genre = 22;
-        } else if (genreChoice === "fantasy") {
-            genre = 10;
         }
         else {
             console.log('Error')
@@ -67,16 +71,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function fetchAnime(genre) {
         fetch(`https://api.jikan.moe/v3/genre/anime/${genre}`)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(animeList) {
-            randomizeAnime(animeList)
-            
-        })
-        .catch(function (error) {
-            console.error("ERROR: ", error);
-        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (animeList) {
+                randomizeAnime(animeList)
+
+            })
+            .catch(function (error) {
+                console.error("ERROR: ", error);
+            })
     }
 
     function randomizeAnime(animeList) {
@@ -95,15 +99,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const animeSynopsis = document.createElement('p');
         animeSynopsis.innerText = animeList.anime[randomAnime].synopsis;
         animeInfoContainer.append(animeSynopsis);
-       
+
 
         // Learn More Button
         const learnMoreBtn = document.createElement('a');
-        learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url);
-        learnMoreBtn.setAttribute('target', '_blank');
+        learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url)
         learnMoreBtn.innerText = "LEARN MORE";
         animeInfoContainer.append(learnMoreBtn);
-        
+
         const imageContainer = document.querySelector('#imageContainer');
 
         //Anime Image
@@ -122,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const mainBtn = document.getElementById('mainBtn');
 
-    mainBtn.addEventListener('click', function() {
+    mainBtn.addEventListener('click', function () {
         //Takes the input value and then sends it to the fetch request. 
         let zipCodeInput = document.querySelector('input').value;
         let zipCode = zipCodeInput
@@ -132,11 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
         clearContent();
         fetchRestaurants(zipCode);
         grabGenre(genreChoice);
-       
+
     })
-    
+
 
 })
-
-
-
