@@ -9,7 +9,33 @@
 </head>
 
 <body>
+    <form>
+        <label>Enter Your Zip Code
+            <input type="text" id="zipCode" name="zipCode">
+        </label>
+        <label>What are you in the mood for?
+            <select id="genreSelection name="genreSelection">
+                <option value="action">Action</option>
+                <option value ="comedy">Comedy</option>
+                <option value ="drama">Drama</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+                <option value ="fantasy">Fantasy</option>
+            </select>
+        </label>
 
+        <button type="button" id="mainBtn">Submit</button>
+    </form>
+
+    <div id= "restaurantContainer">
+    </div>
+
+    <div id ="animeInfoContainer"></div>
+    
+    <div id="imageContainer">
+        <img id="animeImage" >
+    </div>
+    <script src = "js/scripts.js"></script>
 </body>
 
 </html>
