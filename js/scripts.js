@@ -110,8 +110,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const imageContainer = document.querySelector('#imageContainer');
 
         //Anime Image
-        const animeImage = document.querySelector('#animeImage');
+        //const animeImage = document.querySelector('#animeImage');
         const imageSrc = animeList.anime[randomAnime].image_url;
+        const animeImage = document.createElement('img');
         animeImage.src = imageSrc;
         imageContainer.append(animeImage);
     }
@@ -120,13 +121,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function clearContent() {
         document.getElementById('restaurantContainer').innerHTML = '';
         document.getElementById('animeInfoContainer').innerHTML = '';
-        document.getElementById('animeImage').innerHTML = '';
+
     }
 
     const mainBtn = document.getElementById('mainBtn');
 
     mainBtn.addEventListener('click', function () {
-        //Takes the input value and then sends it to the fetch request. 
+        //Takes the input value and then sends it to the fetch request.
         let zipCodeInput = document.querySelector('input').value;
         let zipCode = zipCodeInput
 
