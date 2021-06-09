@@ -11,6 +11,9 @@
 
 <body>
 
+    <!-- Navigation Bar -->
+    <div id='navigation'></div>
+
     <!-- Search Container -->
     <div id='intro'>
         <h1>デートの夜</h1>
@@ -20,28 +23,32 @@
             and
             enter your zipcode and our team of super smart robots will generate the perfect date night for you!</p>
 
-        <select id='anime_select'>
-            <option selected>Select an Anime Genre</option>
-            <option>One</option>
+        <select id='genreSelection' name='genreSelection'>
+            <option value=''>Select an Anime Genre</option>
+            <option value='action'>Action</option>
+            <option value='comedy'>Comedy</option>
+            <option value='drama'>Drama</option>
+            <option value='horror'>Horror</option>
+            <option value='romance'>Romance</option>
         </select>
 
         <form>
-            <input type='number' id='zipcode' placeholder='Enter Your Zipcode'>
+            <input type='text' id='zipCode' name='zipCode' placeholder='Enter Your Zipcode'>
         </form>
-        <button type='button'>Search!</button>
+        <button type='button' id='mainBtn'>Search!</button>
     </div>
 
     <!-- Restaurant Results -->
-    <div id='restaurant_results'>
+    <div id='restaurantContainer'>
         <h2>What's On The Menu Tonight!</h2>
     </div>
 
     <!-- Anime Results -->
-    <div id='anime_results'>
+    <div id='animeInfoContainer'>
         <h2>Anime to Watch</h2>
     </div>
 
-    <script src='/JS/script.js'></script>
+    <script src='../Deto_No_Yoru/JS/script.js'></script>
 </body>
 
 </html>
