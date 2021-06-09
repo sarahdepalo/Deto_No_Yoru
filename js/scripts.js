@@ -39,11 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         restaurantAddress.innerText = restaurants.data[random].address.formatted;
         restaurantContainer.append(restaurantAddress);
 
-        // Restaurant Website:
-        const restaurantWebsite = document.createElement('a');
-        restaurantWebsite.setAttribute('href', restaurants.data[random].restaurant_website);
-        restaurantWebsite.innerText = "VIEW MENU";
-        restaurantContainer.append(restaurantWebsite);
 
     }
 
