@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trending Anime | Date Night</title>
-    <meta name="description"
-        content="Don't know what to watch? Find out what others are watching and plan the perfect deto no yoru.">
-
+    <meta name="description" content="Don't know what to watch? Find out what others are watching and plan the perfect deto no yoru.">
+    <link rel="shortcut icon" type="image.png" href="imgs/deto_no_favicon.png">
+    
     <link rel="stylesheet" href="CSS/trending.css">
 </head>
 
@@ -23,9 +23,9 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Trending</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trending.html">Trending</a></li>
             </ul>
         </div>
     </nav>
@@ -34,32 +34,13 @@
         <div class="container">
             <div class="intro-container">
                 <h1>Trending Anime</h1>
-                <p>Still unsure of what to watch? See what others are currently watching.</p>
+                <p class="fadeInBottom cssanimation">Still unsure of what to watch? See what others are currently watching.</p>
             </div>
         </div>
-        <div class="container">
-            <div class="anime-container" id="animeContainer">
-                <div class="col">
-                    <img src="imgs/testimg.jpeg" alt="anime cover image">
-                </div>
+        <div class="container" id ="mainContainer">
 
-                <div class="col">
-                    <!--This text will have to be created in js with ${} and a for each loop, but this is for basic layout purposes -->
-                    <h2>Angel Beats</h2>
-                    <p>Type: TV</p>
-                    <p>Start Date: Jan 2017</p>
-                    <p>End Date: Dec 2020 </p>
-                    <a class="learnMoreBtn">LEARN MORE</a>
-                </div>
-
-                <div class="col">
-                    <h3>Rating</h3>
-                    <!-- Create this and assign class in JS-->
-                    <p class="neonText">8.93</p>
-                </div>
-
-            </div>
         </div>
+
     </main>
 
     <script src="js/trending.js"></script>

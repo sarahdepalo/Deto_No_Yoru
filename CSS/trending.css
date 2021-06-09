@@ -149,7 +149,22 @@ main {
         text-shadow: none;
     }    
   }
-  
+
+/* Fade in text animation */
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+.cssanimation, .cssanimation span {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
 /* Button Styles */
 
 .learnMoreBtn {
@@ -159,6 +174,7 @@ main {
     padding: 10px 15px;
     display: inline-block;
     margin-top: 5px;
+    text-decoration: none;
 
 }
 
