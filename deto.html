@@ -10,67 +10,81 @@
 </head>
 
 <body>
+    <form>
+        <label>Enter Your Zip Code
+            <input type="text" id="zipCode" name="zipCode">
+        </label>
+        <label>What are you in the mood for?
+            <select id="genreSelection name=" genreSelection">
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+                <option value="fantasy">Fantasy</option>
+            </select>
+        </label>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="site-title">デートの夜</div>
-        <!-- Hamburger Menu Stuff-->
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Trending</a></li>
-            </ul>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="site-title">デートの夜</div>
+            <!-- Hamburger Menu Stuff-->
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Trending</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Search Container -->
+        <div id='intro'>
+            <h1>デートの夜</h1>
+            <h2>Deto No Yoru</h2>
+            <p>Never know what to watch or eat? Make your date nights easier with Deto No Yoru! Simply select an Anime
+                genre
+                and
+                enter your zipcode and our team of super smart robots will generate the perfect date night for you!</p>
+
+            <select id='genreSelection' name='genreSelection'>
+                <option value=''>Select an Anime Genre</option>
+                <option value='action'>Action</option>
+                <option value='comedy'>Comedy</option>
+                <option value='drama'>Drama</option>
+                <option value='horror'>Horror</option>
+                <option value='romance'>Romance</option>
+            </select>
+
+            <form>
+                <input type='text' id='zipCode' name='zipCode' placeholder='Enter Your Zipcode'>
+            </form>
+            <button type='button' id='mainBtn'>Search!</button>
         </div>
-    </nav>
 
-    <!-- Search Container -->
-    <div id='intro'>
-        <h1>デートの夜</h1>
-        <h2>Deto No Yoru</h2>
-        <p>Never know what to watch or eat? Make your date nights easier with Deto No Yoru! Simply select an Anime
-            genre
-            and
-            enter your zipcode and our team of super smart robots will generate the perfect date night for you!</p>
+        <!-- Restaurant Results -->
+        <div id='restaurantContainer'>
+            <h2>What's On The Menu Tonight!</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore corrupti eius rem repudiandae. Fugiat ex
+                perferendis sequi natus obcaecati mollitia non, voluptatum nisi nemo modi quaerat? Id, vitae? Explicabo,
+                vel.</p>
+        </div>
 
-        <select id='genreSelection' name='genreSelection'>
-            <option value=''>Select an Anime Genre</option>
-            <option value='action'>Action</option>
-            <option value='comedy'>Comedy</option>
-            <option value='drama'>Drama</option>
-            <option value='horror'>Horror</option>
-            <option value='romance'>Romance</option>
-        </select>
+        <!-- Anime Results -->
+        <div id='animeInfoContainer'>
+            <h2>Anime to Watch</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio magnam at deserunt voluptates asperiores
+                praesentium iure tempora quod sed eaque molestiae repellendus architecto a possimus temporibus, corporis
+                pariatur, velit quam.
+            </p>
+        </div>
 
-        <form>
-            <input type='text' id='zipCode' name='zipCode' placeholder='Enter Your Zipcode'>
-        </form>
-        <button type='button' id='mainBtn'>Search!</button>
-    </div>
-
-    <!-- Restaurant Results -->
-    <div id='restaurantContainer'>
-        <h2>What's On The Menu Tonight!</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore corrupti eius rem repudiandae. Fugiat ex
-            perferendis sequi natus obcaecati mollitia non, voluptatum nisi nemo modi quaerat? Id, vitae? Explicabo,
-            vel.</p>
-    </div>
-
-    <!-- Anime Results -->
-    <div id='animeInfoContainer'>
-        <h2>Anime to Watch</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio magnam at deserunt voluptates asperiores
-            praesentium iure tempora quod sed eaque molestiae repellendus architecto a possimus temporibus, corporis
-            pariatur, velit quam.
-        </p>
-    </div>
-
-    <script src='../Deto_No_Yoru/JS/script.js'></script>
+        <script src='../Deto_No_Yoru/JS/script.js'></script>
 </body>
 
 </html>
