@@ -133,8 +133,8 @@ h1:focus {
     font-size: 80px;
     color: #fff;
     text-align: left;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
-        0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+    /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
+        0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6; */
 }
 
 #about {
@@ -144,6 +144,7 @@ h1:focus {
 .aboutHeader {
     display: flex;
     justify-content: center;
+    background-color: transparent;
 }
 
 #neonSubText {
@@ -176,9 +177,9 @@ h1:focus {
     justify-content: space-between;
     align-items: center;
     width: auto;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    /* margin-top: 100px; */
 }
 
 .aboutText {
@@ -197,7 +198,7 @@ h1:focus {
     align-items: center;
     background-color: rgba(128, 128, 128, 0.397);
     border-radius: 5%;
-    width: 300px;
+    /* width: 300px; */
 }
 
 .headshotImg {
@@ -218,9 +219,10 @@ h1:focus {
     width: 280px;
 }
 
-.icons {
+#icons {
     display: flex;
     flex-direction: row;
+    background-color: transparent;
 }
 
 .iconImg {
