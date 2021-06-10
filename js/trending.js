@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-
+    // Nav behavior: 
     const toggleButton = document.getElementsByClassName('toggle-button')[0]
     const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -9,22 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
         navbarLinks.classList.toggle('active')
     })
 
+    // Mobile Trending anime functions:
+
     fetch (`https://api.jikan.moe/v3/top/anime/1`)
         .then(function (response) {
             return response.json();
         })
         .then(function(anime) {
-            createResults(anime);
+            createResultsMobile(anime);
+            createResultsDesktop(anime);
            
         })
         .catch(function(error) {
             console.error("ERROR: ", error);
         })
 
-    function createResults(anime) {
+    function createResultsMobile(anime) {
         const animeList = anime.top;
         //changes the array length from 50 to 25:
-        animeList.length = 20;
+        animeList.length = 15;
         console.log(anime.top);
 
         animeList.forEach(function (anime) {
@@ -95,6 +98,104 @@ document.addEventListener('DOMContentLoaded', function () {
             rating.innerText = `${anime.score}`;
             rating.classList.add('neonText');
             ratingsContainer.append(rating);
+        })
+    }
+
+    // Desktop Treding Anime Functions:
+    function createResultsDesktop(anime) {
+        // Splits the array with 15 results into three smaller arrays with 5 results
+        const animeArray = anime.top;
+        const section1Anime = animeArray.slice(0, 5);
+
+        const section2Anime = animeArray.slice(5, 10);
+
+        const section3Anime = animeArray.slice(10, 15);
+
+        section1Anime.forEach(function (anime) {
+            //Grabs the first section
+            const section1 = document.getElementById('section1');
+
+            //Creates an item div for each anime in the first list
+            const section1item = document.createElement('div');
+            section1item.classList.add('item');
+            section1.append(section1item);
+
+            //Creates the title 
+            const sec1AnimeTitle = document.createElement('h2');
+            sec1AnimeTitle.classList.add('heading');
+            sec1AnimeTitle.innerText = `${anime.title}`
+            section1item.append(sec1AnimeTitle);
+
+            //Creates the a element:
+            const sec1AElement = document.createElement('a');
+            sec1AElement.setAttribute('href', anime.url);
+            sec1AElement.setAttribute('target', '_blank');
+            section1item.append(sec1AElement);
+
+            //Creates the image and grabs url:
+            const sec1AnimeImage = document.createElement('img');
+            const imageSrc = anime.image_url;
+            sec1AnimeImage.src = imageSrc;
+            sec1AElement.appendChild(sec1AnimeImage);
+
+        })
+
+        section2Anime.forEach(function (anime) {
+            //Grabs the first section
+            const section2 = document.getElementById('section2');
+
+            //Creates an item div for each anime in the first list
+            const section2item = document.createElement('div');
+            section2item.classList.add('item');
+            section2.append(section2item);
+
+            //Creates the title 
+            const sec2AnimeTitle = document.createElement('h2');
+            sec2AnimeTitle.classList.add('heading');
+            sec2AnimeTitle.innerText = `${anime.title}`
+            section2item.append(sec2AnimeTitle);
+
+            //Creates the a element:
+            const sec2AElement = document.createElement('a');
+            sec2AElement.setAttribute('href', anime.url);
+            sec2AElement.setAttribute('target', '_blank');
+            section2item.append(sec2AElement);
+
+            //Creates the image and grabs url:
+            const sec2AnimeImage = document.createElement('img');
+            const imageSrc = anime.image_url;
+            sec2AnimeImage.src = imageSrc;
+            sec2AElement.appendChild(sec2AnimeImage);
+
+        })
+
+        section3Anime.forEach(function (anime) {
+            //Grabs the first section
+            const section3 = document.getElementById('section3');
+
+            //Creates an item div for each anime in the first list
+            const section3item = document.createElement('div');
+            section3item.classList.add('item');
+            section3.append(section3item);
+
+            //Creates the title 
+            const sec3AnimeTitle = document.createElement('h2');
+            sec3AnimeTitle.classList.add('heading');
+            sec3AnimeTitle.innerText = `${anime.title}`
+            section3item.append(sec3AnimeTitle);
+
+            //Creates the a element:
+            const sec3AElement = document.createElement('a');
+            sec3AElement.setAttribute('href', anime.url);
+            sec3AElement.setAttribute('target', '_blank');
+            section3item.append(sec3AElement);
+
+            //Creates the image and grabs url:
+            const sec3AnimeImage = document.createElement('img');
+            const imageSrc = anime.image_url;
+            sec3AnimeImage.src = imageSrc;
+            sec3AElement.appendChild(sec3AnimeImage);
+
         })
     }
 
