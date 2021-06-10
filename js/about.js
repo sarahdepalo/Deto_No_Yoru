@@ -2,6 +2,13 @@
 
 //Fetching Favorite Anime
 document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', function () {
+        navbarLinks.classList.toggle('active')
+    })
+
     const favoriteButton1 = document.querySelector('#favoriteButton1');
     const favoriteButton2 = document.querySelector('#favoriteButton2');
     const favoriteButton3 = document.querySelector('#favoriteButton3');
