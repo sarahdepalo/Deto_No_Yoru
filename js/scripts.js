@@ -3,6 +3,14 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Nav behavior: 
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', function () {
+        navbarLinks.classList.toggle('active')
+    })
+
     function fetchRestaurants(zipCode) {
         fetch(`https://api.documenu.com/v2/restaurants/zip_code/${zipCode}?key=b1b2d23b1d20a5481f7b5222b3ee79b3`)
             .then(function (response) {
