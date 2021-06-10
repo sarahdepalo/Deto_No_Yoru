@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const restaurantContainer = document.querySelector('#restaurantContainer');
 
         // Restaurant Name
-        const restaurantName = document.createElement('p');
+        const restaurantName = document.createElement('h4');
         restaurantName.innerText = restaurants.data[random].restaurant_name;
         restaurantContainer.append(restaurantName);
 
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const animeInfoContainer = document.querySelector('#animeInfoContainer')
 
         //Anime Title
-        const animeTitle = document.createElement('p');
+        const animeTitle = document.createElement('h4');
         animeTitle.innerText = animeList.anime[randomAnime].title;
         animeInfoContainer.append(animeTitle);
 
