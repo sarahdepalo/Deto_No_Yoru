@@ -15,13 +15,19 @@ html {
 }
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
+} */
 
-div {
+/* div {
     background-color: rgb(0, 0, 0, .7);
     border-radius: 10px;
     text-align: center;
@@ -29,16 +35,16 @@ div {
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     margin: 10px;
-}
+} */
 
-nav {
+/* nav {
     width: 100%;
-}
+} */
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 15px;
     margin-bottom: 30px;
     background-color: rgb(0, 0, 0, 0.7);
@@ -106,7 +112,7 @@ h1:focus {
 }
 
 
-#intro {
+/* #intro {
     width: 35%;
     padding: 10px;
 }
@@ -127,14 +133,12 @@ h1:focus {
     border: 3px rgba(128, 128, 128, 0.397);
     padding: 30px;
     margin: 20px;
-}
+} */
 
 .neonText {
     font-size: 80px;
     color: #fff;
     text-align: left;
-    /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
-        0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6; */
 }
 
 #about {
@@ -144,7 +148,8 @@ h1:focus {
 .aboutHeader {
     display: flex;
     justify-content: center;
-    background-color: transparent;
+    margin-bottom: 10px;
+    /* background-color: rgb(0, 0, 0, 0.7); */
 }
 
 #neonSubText {
@@ -155,31 +160,14 @@ h1:focus {
         0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
 }
 
-/* #nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-.navOptions {
-    padding-right: 30px;
-    color: #fff;
-    text-align: left;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
-        0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
-    box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3;
-} */
-
 #aboutContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: auto;
-    margin-left: 150px;
-    margin-right: 150px;
-    /* margin-top: 100px; */
+    margin-left: 230px;
+    margin-right: 230px;
 }
 
 .aboutText {
@@ -196,9 +184,10 @@ h1:focus {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.397);
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
     border-radius: 5%;
-    /* width: 300px; */
+    width: 300px;
 }
 
 .headshotImg {
@@ -216,7 +205,8 @@ h1:focus {
 
 .headshotText {
     text-indent: 10px;
-    width: 280px;
+    width: auto;
+    margin: 15px;
 }
 
 #icons {
@@ -229,22 +219,64 @@ h1:focus {
     margin-right: 30px;
 }
 
-footer {
-    position: absolute;
+/* Modal Styling */
+.modal__overlay {
+    /* background-color: #000;
+    background-color: rgba(0,0,0,0.5); */
     bottom: 0;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-#footerDiv {
+.modal__overlay.visible {
     display: flex;
-    align-content: center;
 }
 
-#footerUl {
+.modal__content {
+    /* background-color: #fff; */
+    border-radius: 8px;
+    display: block;
+    height: 345px;
+    margin: auto;
+    padding: 16px;
+    position: relative;
+    width: 600px;
+}
+
+#modal {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: flex-start;
+    width: 450px;
+    background-color: rgb(0, 0, 0, 0.9);
+
 }
+
+#imgContainer {
+    background-color: transparent;
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
+
+#infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    margin: 10px;
+}
+
+button.modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 
 @keyframes flicker {
     0%,
@@ -274,6 +306,7 @@ footer {
         box-shadow: none;
     }
 }
+
 
 @media screen and (min-width: 640px) and (max-width: 1350px) {
     .navDiv {
