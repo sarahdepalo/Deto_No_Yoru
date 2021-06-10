@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
         navbarLinks.classList.toggle('active')
     })
 
-    fetch (`https://api.jikan.moe/v3/top/anime/1`)
+    fetch(`https://api.jikan.moe/v3/top/anime/1`)
         .then(function (response) {
             return response.json();
         })
-        .then(function(anime) {
+        .then(function (anime) {
             createResults(anime);
-           
+
         })
-        .catch(function(error) {
+        .catch(function (error) {
             console.error("ERROR: ", error);
         })
 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const animeName = document.createElement('h2');
             animeName.innerText = `${anime.title}`;
             infoContainer.append(animeName);
-            
+
             //Creates Anime Type
             const animeType = document.createElement('p');
             animeType.innerText = `Type: ${anime.type}`;
@@ -99,4 +99,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 })
-
