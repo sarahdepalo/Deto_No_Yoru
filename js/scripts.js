@@ -99,7 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Learn More Button
         const learnMoreBtn = document.createElement('a');
         learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url)
+        learnMoreBtn.setAttribute('target', '_blank');
         learnMoreBtn.innerText = "LEARN MORE";
+        learnMoreBtn.classList.add('learnMoreBtn');
         animeInfoContainer.append(learnMoreBtn);
 
         const imageContainer = document.querySelector('#imageContainer');
