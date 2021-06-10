@@ -28,14 +28,12 @@ main {
     margin-bottom: 30px;
     background-color: rgb(0, 0, 0, .7);
     color: white;
-   
-    
 }
 
 .navbar-links ul {
     display: flex;
     margin: 0;
-    padding:0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -47,8 +45,7 @@ main {
 }
 
 .navbar-links a:hover {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
-        0 0 25px #FF10F0, 0 0 30px #FF10F0, 0 0 35px #FF10F0;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8, 0 0 25px #FF10F0, 0 0 30px #FF10F0, 0 0 35px #FF10F0;
 }
 
 .toggle-button {
@@ -64,7 +61,7 @@ main {
 
 .toggle-button .bar {
     height: 3px;
-    width: 100%; 
+    width: 100%;
     background-color: white;
     border-radius: 10px;
 }
@@ -72,19 +69,17 @@ main {
 .site-title {
     color: #fff;
     font-size: 25px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
-        0 0 25px #FF10F0, 0 0 30px #FF10F0, 0 0 35px #FF10F0;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8, 0 0 25px #FF10F0, 0 0 30px #FF10F0, 0 0 35px #FF10F0;
 }
 
-/* Main Styles */
+/* Mobile Container Styles */
 
 .container {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
 }
-
 
 .intro-container {
     width: 100%;
@@ -112,11 +107,10 @@ main {
     display: block;
     align-self: center;
     padding: 15px;
-
 }
+
 .col {
-    width:200px;
-   
+    width: 200px;
 }
 
 .col h2 {
@@ -137,37 +131,32 @@ main {
 }
 
 /* Flickering animation for ratings number */
+
 @keyframes flicker {
-    
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
-        text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px #f09,
-        0 0 80px #f09,
-        0 0 90px #f09,
-        0 0 100px #f09,
-        0 0 150px #f09;
-    
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09, 0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
     }
-    
-    20%, 24%, 55% {        
+    20%, 24%, 55% {
         text-shadow: none;
-    }    
-  }
+    }
+}
 
 /* Fade in text animation */
 
-.fadeInBottom { animation-name: fadeInBottom }
+.fadeInBottom {
+    animation-name: fadeInBottom
+}
+
 @keyframes fadeInBottom {
     from {
         opacity: 0;
         transform: translateY(100%);
     }
-    to { opacity: 1 }
+    to {
+        opacity: 1
+    }
 }
+
 .cssanimation, .cssanimation span {
     animation-duration: 2s;
     animation-fill-mode: both;
@@ -176,49 +165,145 @@ main {
 /* Button Styles */
 
 .learnMoreBtn {
-    background-color:none;
+    background-color: none;
     border: 2px solid #FF10F0;
     color: #FF10F0;
     padding: 10px 15px;
     display: inline-block;
     margin-top: 5px;
     text-decoration: none;
-
 }
 
 a.learnMoreBtn:hover {
-    background-color:#FF10F0;
-    color:white;
-    box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3; 
+    background-color: #FF10F0;
+    color: white;
+    box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3;
 }
 
-/* Responsiveness */ 
+/* Netflix Carousel Styles */
 
-@media (min-width: 640px) { body {font-size:1rem;} } 
-@media (min-width:960px) { body {font-size:1.2rem;} } 
-@media (min-width:1100px) { body {font-size:1.2rem;} } 
+.carouselWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
 
-/* Phone Responsiveness */
+section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+}
+
+.item {
+    position: relative;
+    padding: 0 2px;
+    transition-duration: all;
+}
+
+.item img {
+    height: 300px;
+    padding: 5px;
+}
+
+.item:hover {
+    margin: 0 40px;
+    flex-grow: 1.2;
+    transition-duration: 250ms;
+    transform: scale(1.2);
+}
+
+.heading {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    font-size: 25px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px rgb(87, 0, 87), 0 0 25px rgb(87, 0, 87), 0 0 30px rgb(87, 0, 87), 0 0 35px rgb(87, 0, 87);
+    color: #fff;
+}
+
+.duration {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: #fff;
+}
+
+.arrow__btn {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: rgb(0, 0, 0);
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.left-arrow {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.right-arrow {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Responsiveness */
+
+@media (min-width: 640px) {
+    body {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:960px) {
+    body {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:1100px) {
+    body {
+        font-size: 1.2rem;
+    }
+}
+
+/* Reverts to original styling on small screens */
+
+@media screen and (min-width:1100px) {
+    .anime-container {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 960px) {
+    /* Hides the Netflix carousel on mobile devices: */
+    .carouselWrapper {
+        display: none;
+    }
     main {
         margin: 0 auto;
         width: auto;
-       
     }
     .container {
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: auto;
-     
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: auto;
     }
-
     .anime-container, .intro-container {
         flex-wrap: wrap;
         width: auto;
         margin: 5px;
     }
-
     .intro-container p {
         padding: 5px;
     }
@@ -228,29 +313,23 @@ a.learnMoreBtn:hover {
         width: 100%;
         text-align: center;
     }
-
     .col img {
         display: block;
         margin-left: auto;
         margin-right: auto;
-       
     }
-
     /* Hamburger Menu Styles */
     .toggle-button {
         display: flex;
     }
-
     .navbar-links {
-        display:none;
+        display: none;
         width: 100%
     }
-
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .navbar ul {
         flex-direction: column;
         width: 100%;
@@ -259,17 +338,15 @@ a.learnMoreBtn:hover {
         text-align: center;
         padding: .5rem 1rem;
     }
-
     .navbar-links.active {
         display: flex;
     }
-  }
+}
 
-  /* iPad Specific Responsiveness */
-   @media only screen and 
-   (min-device-width: 768px) and (max-device-width: 1024px) {
+/* iPad Specific Responsiveness */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     main {
         width: auto;
     }
-
-   }
+}
