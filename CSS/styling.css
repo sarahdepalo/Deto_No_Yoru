@@ -19,6 +19,7 @@ h2 {
 .cssanimation span { display: inline-block }
 
 .fadeInBottom { animation-name: fadeInBottom }
+
 @keyframes fadeInBottom {
     from {
         opacity: 0;
@@ -78,7 +79,7 @@ h1:focus {
 }
 
 html {
-    background: url('../imgs/background.jpeg')no-repeat center center fixed;
+    background: url('../imgs/AdobeStock_429450215.jpeg')no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -97,6 +98,18 @@ main {
     margin: 0 auto;
 }
 
+/* --- Container Styling --- */
+
+.container {
+    background-color: rgb(0, 0, 0, .9);
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+}
+
 .centerContainer {
     width: 100%;
     display: flex;
@@ -105,18 +118,6 @@ main {
     justify-content: center;
     margin: 0 auto;
     align-items: center;
-}
-
-/* --- Container Styling --- */
-
-.container {
-    background-color: rgb(0, 0, 0, .7);
-    margin: 10px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 50%;
 }
 
 /* --- Navbar Styling --- */
@@ -167,49 +168,23 @@ main {
     border-radius: 10px;
 }
 
- /* Hamburger Menu Styles */
- .toggle-button {
-    display: flex;
-}
-
-.navbar-links {
-    display:none;
-    width: 100%
-}
-
-.navbar {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.navbar ul {
-    flex-direction: column;
-    width: 100%;
-}
-.navbar-links li {
-    text-align: center;
-    padding: .5rem 1rem;
-}
-
-.navbar-links.active {
-    display: flex;
-}
-
 /* --- Button/Form Styling --- */
 
-#mainBtn {
-    width: 80%;
-    background-color: rgb(153, 51, 153, .5);
-    border: none;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
+.learnMoreBtn {
+    background-color: transparent;
+    border: 2px solid #FF10F0;
+    color: #FF10F0;
+    padding: 10px 15px;
     display: inline-block;
-    font-size: larger;
-    border-radius: 10px;
+    margin-top: 5px;
+    text-decoration: none;
+
 }
-#mainBtn:hover{
-    background-color: rgb(153, 51, 153);
+
+.learnMoreBtn:hover {
+    background-color:#FF10F0;
+    color:white;
+    box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3; 
 }
 
 input[type=text], select {
@@ -221,4 +196,44 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
     text-align: left;
+  }
+
+  /* --- Responsiveness --- */
+
+  @media screen and (max-width: 960px) {
+      .container {
+          width: 90%;
+      }
+
+
+    /* --- Hamburger Menu Styles --- */
+    
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display:none;
+        width: 100%
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+  }
+
   }
