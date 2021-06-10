@@ -21,12 +21,16 @@ body {
     letter-spacing: 1px;
 }
 
+<<<<<<< HEAD
 /* main {
     width: 1060px;
     margin: 0 auto;
 } */
 
 /* Nav Styling */
+=======
+
+>>>>>>> 52b03697e33920472a4e45b687a014ab0e18083f
 .navbar {
     display: flex;
     align-items: center;
@@ -52,7 +56,7 @@ body {
 }
 
 .navbar-links a:hover {
-    color: #ff40f3;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8, 0 0 25px #FF10F0, 0 0 30px #FF10F0, 0 0 35px #FF10F0;
 }
 
 .toggle-button {

@@ -1,6 +1,15 @@
+
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Nav behavior: 
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', function () {
+        navbarLinks.classList.toggle('active')
+    })
 
     function fetchRestaurants(zipCode) {
         fetch(`https://api.documenu.com/v2/restaurants/zip_code/${zipCode}?key=b1b2d23b1d20a5481f7b5222b3ee79b3`)
@@ -25,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const restaurantContainer = document.querySelector('#restaurantContainer');
 
         // Restaurant Name
-        const restaurantName = document.createElement('p');
+        const restaurantName = document.createElement('h4');
         restaurantName.innerText = restaurants.data[random].restaurant_name;
         restaurantContainer.append(restaurantName);
 
@@ -86,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const animeInfoContainer = document.querySelector('#animeInfoContainer')
 
         //Anime Title
-        const animeTitle = document.createElement('p');
+        const animeTitle = document.createElement('h4');
         animeTitle.innerText = animeList.anime[randomAnime].title;
         animeInfoContainer.append(animeTitle);
 
@@ -99,7 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Learn More Button
         const learnMoreBtn = document.createElement('a');
         learnMoreBtn.setAttribute('href', animeList.anime[randomAnime].url)
+        learnMoreBtn.setAttribute('target', '_blank');
         learnMoreBtn.innerText = "LEARN MORE";
+        learnMoreBtn.classList.add('learnMoreBtn');
         animeInfoContainer.append(learnMoreBtn);
 
         const imageContainer = document.querySelector('#imageContainer');
