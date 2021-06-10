@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deto No Yoru</title>
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Our Team | Date Night</title>
+    <link rel="stylesheet" href="./CSS/about.css">
 </head>
 
 <body>
@@ -20,85 +20,108 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Trending</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trending.html">Trending</a></li>
             </ul>
         </div>
     </nav>
-    <div>
-        <div class="aboutHeader">
-            <h1 class="neonText" id="about">
-                About The Team
-            </h1>
-        </div>
-        <container id="aboutContainer">
-            <div class="headshotBoxes">
-                <header>
-                    <img class="headshotImg" src="./imgs/photo.png">
-                </header>
-                <h2 class="headshotName">
-                    Rodrigo Ruiz
-                </h2>
-                <p class="headshotText">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa vel officia consectetur
-                    excepturi error ullam ratione velit aliquid odit minus quos mollitia ab similique magnam laborum
-                    harum corrupti beatae.
-                </p>
-                <div class="icons">
-                    <a href="https://github.com/Rodrigo-Ruiz1" target="_blank" rel="noreferrer noopener"><img
-                            src="./imgs/GitHub-Mark-32px.png" class="iconImg"></a>
-                    <a href="https://www.linkedin.com/in/rodrigo-ruiz-6b74b2211/" target="_blank"
-                        rel="noreferrer noopener"><img src="./imgs/iconfinder_317725_linkedin_social_icon_32px.png"></a>
-                </div>
+    
+    <main>
+        <div>
+            <div class="aboutHeader">
+                <h1 class="neonText" id="about">
+                    Our Team
+                </h1>
             </div>
-            <div class="headshotBoxes">
-                <header>
-                    <img class="headshotImg" src="./imgs/headshot1.jpg">
-                </header>
-                <h2 class="headshotName">
-                    Sarah dePalo
-                </h2>
-                <p class="headshotText">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa vel officia consectetur
-                    excepturi error ullam ratione velit aliquid odit minus quos mollitia ab similique magnam laborum
-                    harum corrupti beatae.
-                </p>
-                <div class="icons">
-                    <a href="https://github.com/sarahdepalo" target="_blank" rel="noreferrer noopener"><img
-                            src="./imgs/GitHub-Mark-32px.png" class="iconImg"></a>
-                    <a href="https://www.linkedin.com/in/sarahdepalo/" target="_blank" rel="noreferrer noopener"><img
-                            src="./imgs/iconfinder_317725_linkedin_social_icon_32px.png"></a>
+            <container id="aboutContainer">
+                <div class="headshotBoxes">
+                    <header>
+                        <img class="headshotImg" src="./imgs/photo.png">
+                    </header>
+                    <h2 class="headshotName">
+                        Rodrigo Ruiz
+                    </h2>
+                    <p class="headshotText">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa vel officia consectetur
+                        excepturi error ullam ratione velit aliquid odit minus quos mollitia ab similique magnam.
+                    </p>
+                    <div id="icons">
+                        <a href="https://github.com/Rodrigo-Ruiz1" target="_blank" rel="noreferrer noopener"><img
+                                src="./imgs/GitHub-Mark-32px.png" class="iconImg"></a>
+                        <a href="https://www.linkedin.com/in/rodrigo-ruiz-6b74b2211/" target="_blank"
+                            rel="noreferrer noopener"><img
+                                src="./imgs/iconfinder_317725_linkedin_social_icon_32px.png"></a>
+                        <button type="button" id="favoriteButton1"></button>
+
+                        <!-- Beginning of the modal -->
+                        <div id="overlay" class="modal__overlay">
+                            <div id="modal" class="modal__content">
+                                
+                                <button type="button" id="closeModal" class="modal__close">X</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="headshotBoxes">
-                <header>
-                    <img class="headshotImg" src="./imgs/alyna.jpeg">
-                </header>
-                <h2 class="headshotName">
-                    Alyna Palamarchuk
-                </h2>
-                <p class="headshotText">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa vel officia consectetur
-                    excepturi error ullam ratione velit aliquid odit minus quos mollitia ab similique magnam laborum
-                    harum corrupti beatae.
-                </p>
-                <div class="icons">
-                    <a href="https://github.com/alynapchuk" target="_blank" rel="noreferrer noopener"><img
-                            src="./imgs/GitHub-Mark-32px.png" class="iconImg"></a>
-                    <a href="https://www.linkedin.com/in/alynapalamarchuk/" target="_blank"
-                        rel="noreferrer noopener"><img src="./imgs/iconfinder_317725_linkedin_social_icon_32px.png"></a>
+                <div class="headshotBoxes">
+                    <header>
+                        <img class="headshotImg" src="./imgs/headshot1.jpg">
+                    </header>
+                    <h2 class="headshotName">
+                        Sarah dePalo
+                    </h2>
+                    <p class="headshotText">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa vel officia consectetur
+                        excepturi error ullam ratione velit aliquid odit minus quos mollitia ab similique magnam.
+                    </p>
+                    <div id="icons">
+                        <a href="https://github.com/sarahdepalo" target="_blank" rel="noreferrer noopener"><img
+                                src="./imgs/GitHub-Mark-32px.png" class="iconImg"></a>
+                        <a href="https://www.linkedin.com/in/sarahdepalo/" target="_blank"
+                            rel="noreferrer noopener"><img
+                                src="./imgs/iconfinder_317725_linkedin_social_icon_32px.png"></a>
+                        <button type="button" id="favoriteButton2"></button>
+
+                        <!-- Beginning of the modal -->
+                        <div id="overlay" class="modal__overlay">
+                            <div id="modal" class="modal__content">
+                                <p></p>
+                                <button type="button" id="closeModal" class="modal__close">X</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        </container>
-    </div>
-    <footer>
-        <div id="footerDiv">
-            <ul id="footerUl">
-                <li>https://jikan.docs.apiary.io/#</li>
-                <li>https://api.documenu.com/</li>
-            </ul>
+                <div class="headshotBoxes">
+                    <header>
+                        <img class="headshotImg" src="./imgs/alyna.jpeg">
+                    </header>
+                    <h2 class="headshotName">
+                        Alyna Palamarchuk
+                    </h2>
+                    <p class="headshotText">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa vel officia consectetur
+                        excepturi error ullam ratione velit aliquid odit minus quos mollitia ab similique magnam.
+                    </p>
+                    <div id="icons">
+                        <a href="https://github.com/alynapchuk" target="_blank" rel="noreferrer noopener"><img
+                                src="./imgs/GitHub-Mark-32px.png" class="iconImg"></a>
+                        <a href="https://www.linkedin.com/in/alynapalamarchuk/" target="_blank"
+                            rel="noreferrer noopener"><img
+                                src="./imgs/iconfinder_317725_linkedin_social_icon_32px.png"></a>
+
+                        <!-- Beginning of modal -->
+                        <button type="button" id="favoriteButton3"></button>
+                        <div id="overlay" class="modal__overlay">
+                            <div id="modal" class="modal__content">
+                                <p></p>
+                                <button type="button" id="closeModal" class="modal__close">X</button>
+                            </div>
+                        </div>
+                    </div>
+            </container>
         </div>
-    </footer>
+    </main>
+    <script src="js/about.js"></script>
 </body>
 
 </html>
