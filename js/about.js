@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
         imgContainer.append(animeImg);
 
         //Creates container for anime information, appends to modal content
-        const animeTitle = document.createElement('h3');
+        const animeTitle = document.createElement('h6');
+        animeTitle.setAttribute('id', 'animeTitle');
         const infoContainer = document.createElement('div');
         infoContainer.setAttribute('id', 'infoContainer')
         const title = data.title;
@@ -108,7 +109,8 @@ document.addEventListener('DOMContentLoaded', function () {
         imgContainer.append(animeImg);
 
         //Creates container for anime information, appends to modal content
-        const animeTitle = document.createElement('h3');
+        const animeTitle = document.createElement('h6');
+        animeTitle.setAttribute('id', 'animeTitle');
         const infoContainer = document.createElement('div');
         infoContainer.setAttribute('id', 'infoContainer')
         const title = data.title;
@@ -151,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
         imgContainer.append(animeImg);
 
         //Creates container for anime information, appends to modal content
-        const animeTitle = document.createElement('h3');
+        const animeTitle = document.createElement('h6');
+        animeTitle.setAttribute('id', 'animeTitle');
         const infoContainer = document.createElement('div');
         const title = data.title;
         animeTitle.innerText = title;
