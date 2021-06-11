@@ -439,6 +439,12 @@ section {
     .container {
         width: 100%;
     }
+
+}
+
+/* Ipad Pro -specific, kept displaying the carousel */
+
+@media only screen and (min-width: 834px) and (max-width: 1194px)  {
     .carouselWrapper {
         display: none;
     }
