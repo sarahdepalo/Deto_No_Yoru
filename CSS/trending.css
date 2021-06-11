@@ -373,7 +373,9 @@ section {
         margin-bottom: 0px;
         margin-top: 0px;
     }
-
+    .centerContainer {
+        width: 90%;
+    }
     .container {
         flex-direction: column;
         flex-wrap: wrap;
