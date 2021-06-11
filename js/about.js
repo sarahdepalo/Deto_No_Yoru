@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Fetches data for favorite anime 1
     function favoriteAnime1(data) {
-        console.log(data);
 
         //Creates container for image, appends to modal content
         const modal = document.querySelector('#modal');
@@ -76,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const animeType = document.createElement('p');
         const type = data.type;
-        console.log(type)
         animeType.innerText = `Type: ${type}`;
         infoContainer.append(animeType);
 
@@ -97,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Fetches data for favorite anime 2
     function favoriteAnime2(data) {
-        console.log(data)
 
         //Creates container for image, appends to modal content
         const modal = document.querySelector('#modal');
@@ -122,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const animeType = document.createElement('p');
         const type = data.type;
-        console.log(type)
         animeType.innerText = `Type: ${type}`;
         infoContainer.append(animeType);
 
@@ -143,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Fetches data for favorite anime 3
     function favoriteAnime3(data) {
-        console.log(data)
 
         //Creates container for image, appends to modal content
         const modal = document.querySelector('#modal');
@@ -167,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const animeType = document.createElement('p');
         const type = data.type;
-        console.log(type)
         animeType.innerText = `Type: ${type}`;
         infoContainer.append(animeType);
 
