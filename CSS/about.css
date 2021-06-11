@@ -216,11 +216,31 @@ h2 {
 #icons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: transparent;
 }
 
 .iconImg {
     margin-right: 30px;
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid #FF10F0;
+    color: #FF10F0;
+    padding: 4px 6px;
+    display: inline-block;
+    text-decoration: none;
+    width: 64px;
+    margin-left: 30px;
+    margin-bottom: 4px;
+    margin-top: -3px;
+}
+
+.button:hover {
+    background-color: #FF10F0;
+    color: white;
+    box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3;
 }
 
 /* Modal Styling */
@@ -231,7 +251,7 @@ h2 {
     display: none;
     left: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
 }
@@ -249,6 +269,7 @@ h2 {
     padding: 16px;
     position: relative;
     width: 600px;
+    z-index: 9999;
 }
 
 #modal {
@@ -272,8 +293,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    margin: -10px;
+    margin: -20px;
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 #animeTitle {
@@ -297,12 +319,6 @@ h2 {
     background-color: #FF10F0;
     color: white;
     box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3;
-}
-
-button.modal__close {
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 
@@ -349,6 +365,30 @@ button.modal__close {
        width: auto;
     }
 
+    .modal__content {
+        height: 300px;
+        width: 500px;
+        padding: 5px;
+    }
+
+    #infoContainer {
+        padding: 5px;
+        margin-left: -30px;
+        margin-top: -20px;
+    }
+
+    #animeTitle {
+        font-size: 20px;
+        /* margin-top: 40px; */
+    }
+
+    #animeType {
+        margin-bottom: -100px;
+    }
+
+    .learnMoreButton {
+        padding: 5px 5px;
+    }
 
     .container {
       flex-direction: column;
