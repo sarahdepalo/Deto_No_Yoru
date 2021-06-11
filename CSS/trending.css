@@ -263,6 +263,7 @@ section {
     width: 100%;
     position: relative;
     display: grid;
+    overflow: hidden;
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
 }
@@ -274,7 +275,7 @@ section {
 }
 
 .item img {
-    height: 375px;
+    height: 345px;
     padding: 5px;
 }
 
@@ -372,7 +373,9 @@ section {
         margin-bottom: 0px;
         margin-top: 0px;
     }
-
+    .centerContainer {
+        width: 90%;
+    }
     .container {
         flex-direction: column;
         flex-wrap: wrap;
@@ -399,6 +402,7 @@ section {
     }
     /* Hamburger Menu Styles */
     .toggle-button {
+        margin-top: 6px;
         display: flex;
     }
     .navbar-links {

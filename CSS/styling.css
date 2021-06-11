@@ -235,6 +235,7 @@ input[type=text], select {
     /* --- Hamburger Menu Styles --- */
     .toggle-button {
         display: flex;
+        margin-top: 6px;
     }
     .navbar-links {
         display: none;
