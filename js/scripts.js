@@ -1,4 +1,3 @@
-
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -33,24 +32,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const restaurantContainer = document.querySelector('#restaurantContainer');
 
-        // Restaurant Name
-        const restaurantName = document.createElement('h4');
-        restaurantName.innerText = restaurants.data[random].restaurant_name;
-        restaurantContainer.append(restaurantName);
+        if (restaurants.data.length == 0) {
+            const errorMessage = document.createElement('p');
+            errorMessage.innerText = "Sorry, we couldn't find any results for your area.";
+            restaurantContainer.append(errorMessage);
+        } else {
+            // Restaurant Name
+            const restaurantName = document.createElement('h4');
+            restaurantName.innerText = restaurants.data[random].restaurant_name;
+            restaurantContainer.append(restaurantName);
 
-        // Restaurant Phone number
-        const restaurantNumber = document.createElement('p');
-        restaurantNumber.innerText = restaurants.data[random].restaurant_phone;
-        restaurantContainer.append(restaurantNumber);
+            // Restaurant Phone number
+            const restaurantNumber = document.createElement('p');
+            restaurantNumber.innerText = restaurants.data[random].restaurant_phone;
+            restaurantContainer.append(restaurantNumber);
 
-        // Restaurant Address:
-        const restaurantAddress = document.createElement('p');
-        restaurantAddress.innerText = restaurants.data[random].address.formatted;
-        restaurantContainer.append(restaurantAddress);
+            // Restaurant Address:
+            const restaurantAddress = document.createElement('p');
+            restaurantAddress.innerText = restaurants.data[random].address.formatted;
+            restaurantContainer.append(restaurantAddress);
 
+        }
 
     }
-
 
     function grabGenre(genreChoice) {
         // Matches the genre with the number from Jikan
@@ -94,6 +98,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const animeInfoContainer = document.querySelector('#animeInfoContainer')
 
+        //Anime Image
+        const imageSrc = animeList.anime[randomAnime].image_url;
+        const animeImage = document.createElement('img');
+        animeImage.src = imageSrc;
+        animeImage.classList.add('animeImage');
+        animeInfoContainer.append(animeImage);
+
         //Anime Title
         const animeTitle = document.createElement('h4');
         animeTitle.innerText = animeList.anime[randomAnime].title;
@@ -113,14 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
         learnMoreBtn.classList.add('learnMoreBtn');
         animeInfoContainer.append(learnMoreBtn);
 
-        const imageContainer = document.querySelector('#imageContainer');
-
-        //Anime Image
-        //const animeImage = document.querySelector('#animeImage');
-        const imageSrc = animeList.anime[randomAnime].image_url;
-        const animeImage = document.createElement('img');
-        animeImage.src = imageSrc;
-        imageContainer.append(animeImage);
     }
 
     // Clears all three divs with each search:
