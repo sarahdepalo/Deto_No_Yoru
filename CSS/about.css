@@ -385,21 +385,24 @@ h2 {
 
     #infoContainer {
         padding: 5px;
-        margin-left: -30px;
+        margin-left: -25px;
         margin-top: -20px;
     }
 
     #animeTitle {
-        font-size: 20px;
-        /* margin-top: 40px; */
+        font-size: 18px;
+        margin-left: 5px;
+        padding: 5px;
     }
 
     #animeType {
         margin-bottom: -100px;
+        padding: 5px;
     }
 
     .learnMoreButton {
         padding: 5px 5px;
+    }
 
     .aboutHeader h2 {
         margin-bottom: 0px;
@@ -474,7 +477,6 @@ h2 {
     .navbar-links.active {
         display: flex;
     }
-  }
 
   /* iPad Specific Responsiveness */
    @media only screen and 
@@ -482,5 +484,5 @@ h2 {
     main {
         width: 90%;
     }
-
-   }
+}
+}
