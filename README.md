@@ -2,7 +2,7 @@
 
 デートの夜  (Deto No Yoru) is a small website dedicated to making date nights easier. If you’re tired of never knowing what to watch or eat, Deto No Yoru is your solution! With the click of one button, our app will tell you which local restaurant you should try and what anime you should watch. If you’re still unsure of what to watch, our trending page will show you the top anime series according to [MyAnimeList](https://myanimelist.net/topanime.php). 
 
-Plan your perfect date night at [link to website]().
+Plan your perfect date night at [Deto No Yoru](https://deto-no-yoru.netlify.app/).
 
 ![gif of how to use Deto no Yoru](imgs/homepage.gif)
 
