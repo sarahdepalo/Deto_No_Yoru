@@ -148,6 +148,11 @@ h2 {
     justify-content: center;
 }
 
+.aboutHeader h2 {
+    margin-bottom: -4px;
+    margin-top: -2px;
+}
+
 .centerContainer {
     width: 100%;
     display: flex;
@@ -348,7 +353,10 @@ button.modal__close {
         margin: 0 auto;
        width: auto;
     }
-
+    .aboutHeader h2 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
 
     .container {
       flex-direction: column;
