@@ -86,10 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
         infoContainer.append(animeScore);
 
         //Creates link to page with all the information for the anime, appends to info container
-        const learnMoreBtn = document.createElement('a');
-        learnMoreBtn.setAttribute('href', data.url)
-        learnMoreBtn.innerText = "LEARN MORE";
-        infoContainer.append(learnMoreBtn);
+        const learnMoreButton = document.createElement('a');
+        learnMoreButton.innerText = `LEARN MORE`;
+        learnMoreButton.setAttribute('href', data.url);
+        learnMoreButton.setAttribute('target', '_blank');
+        learnMoreButton.classList.add('learnMoreButton');
+        infoContainer.append(learnMoreButton);
 
     }
 
@@ -130,10 +132,12 @@ document.addEventListener('DOMContentLoaded', function () {
         infoContainer.append(animeScore);
 
         //Creates link to page with all the information for the anime, appends to info container
-        const learnMoreBtn = document.createElement('a');
-        learnMoreBtn.setAttribute('href', data.url)
-        learnMoreBtn.innerText = "LEARN MORE";
-        infoContainer.append(learnMoreBtn);
+        const learnMoreButton = document.createElement('a');
+        learnMoreButton.innerText = `LEARN MORE`;
+        learnMoreButton.setAttribute('href', data.url);
+        learnMoreButton.setAttribute('target', '_blank');
+        learnMoreButton.classList.add('learnMoreButton');
+        infoContainer.append(learnMoreButton);
 
     }
 
@@ -173,10 +177,12 @@ document.addEventListener('DOMContentLoaded', function () {
         infoContainer.append(animeScore);
 
         //Creates link to page with all the information for the anime, appends to info container
-        const learnMoreBtn = document.createElement('a');
-        learnMoreBtn.setAttribute('href', data.url)
-        learnMoreBtn.innerText = "LEARN MORE";
-        infoContainer.append(learnMoreBtn);
+        const learnMoreButton = document.createElement('a');
+        learnMoreButton.innerText = `LEARN MORE`;
+        learnMoreButton.setAttribute('href', data.url);
+        learnMoreButton.setAttribute('target', '_blank');
+        learnMoreButton.classList.add('learnMoreButton');
+        infoContainer.append(learnMoreButton);
 
     }
 

@@ -159,7 +159,6 @@ h2 {
 }
 
 #neonSubText {
-    /* font-size: 80px; */
     color: #fff;
     text-align: left;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8,
@@ -172,8 +171,6 @@ h2 {
     justify-content: center;
     align-items: center;
     width: auto;
-    /* margin-left: 230px;
-    margin-right: 230px; */
 }
 
 .aboutText {
@@ -275,7 +272,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    margin: 10px;
+    margin: -10px;
+    margin-right: 5px;
 }
 
 #animeTitle {
@@ -283,6 +281,22 @@ h2 {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #c116d8, 0 0 20px #c116d8, 0 0 25px #FF10F0, 0 0 30px #FF10F0, 0 0 35px #FF10F0;
     font-size: 24px;
     margin-bottom: -3px;
+}
+
+.learnMoreButton {
+    background-color: none;
+    border: 2px solid #FF10F0;
+    color: #FF10F0;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.learnMoreButton:hover {
+    background-color: #FF10F0;
+    color: white;
+    box-shadow: 0px 0px 10px #ff40f3, 0px 0px 40px#ff40f3, 0px 0px 80px #ff40f3;
 }
 
 button.modal__close {
@@ -321,57 +335,6 @@ button.modal__close {
     }
 }
 
-
-@media screen and (min-width: 640px) and (max-width: 1350px) {
-    .navDiv {
-        display: flex;
-        justify-content: center;
-    }
-
-    #aboutContainer {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .headshotBoxes {
-        width: 350px;
-        margin-top: 20px;
-    }
-
-    .headshotImg {
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    #aboutContainer {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 50px;
-    }
-
-    .navDiv {
-        display: flex;
-        justify-content: center;
-    }
-
-    .headshotBoxes {
-        width: 190px;
-        margin-top: 20px;
-    }
-
-    .headshotImg {
-        width: 150px;
-    }
-
-    .headshotText {
-        width: 145px;
-    }
-}
-
 /* Responsiveness */ 
 
 @media (min-width: 640px) { body {font-size:1rem;} } 
@@ -383,13 +346,19 @@ button.modal__close {
 @media screen and (max-width: 960px) {
     main {
         margin: 0 auto;
-       
+       width: auto;
     }
+
+
     .container {
       flex-direction: column;
       flex-wrap: wrap;
       width: 90%;
-     
+    }
+
+    #aboutContainer {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .aboutHeader {
