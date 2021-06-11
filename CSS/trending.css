@@ -27,6 +27,11 @@ main {
 
 /* Navbar styles */
 
+#titleLink {
+    text-decoration: none;
+    color: white;
+}
+
 .navbar {
     display: flex;
     align-items: center;

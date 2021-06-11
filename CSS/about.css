@@ -47,6 +47,11 @@ main {
     margin: 0 auto;
 }
 
+#titleLink {
+    text-decoration: none;
+    color: white;
+}
+
 .navbar {
     display: flex;
     align-items: center;

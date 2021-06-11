@@ -118,6 +118,11 @@ main {
 
 /* --- Navbar Styling --- */
 
+#titleLink {
+    text-decoration: none;
+    color: white;
+}
+
 .site-title {
     color: #fff;
     font-size: 25px;
