@@ -430,7 +430,7 @@ section {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     main {
-        width: 90%;
+        width: auto;
     }
     h1 { 
         width: 80%
@@ -442,10 +442,13 @@ section {
 
 }
 
-/* Ipad Pro -specific, kept displaying the carousel */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
 
-@media only screen and (min-width: 834px) and (max-width: 1194px)  {
-    .carouselWrapper {
+        .carouselWrapper {
         display: none;
     }
 }
