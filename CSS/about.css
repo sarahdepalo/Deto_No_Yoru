@@ -211,6 +211,7 @@ h2 {
     text-indent: 10px;
     width: auto;
     margin: 15px;
+    padding: 10px;
 }
 
 #icons {
@@ -218,6 +219,7 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;
+    flex-wrap: wrap;
 }
 
 .iconImg {

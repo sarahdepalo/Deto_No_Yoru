@@ -224,4 +224,11 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleModal();
         clearFavorites();
     })
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            toggleModal();
+            clearFavorites();
+        }
+    })
 })
