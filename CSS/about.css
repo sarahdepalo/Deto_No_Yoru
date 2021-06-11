@@ -400,7 +400,7 @@ h2 {
 
     .learnMoreButton {
         padding: 5px 5px;
-
+    }
     .aboutHeader h2 {
         margin-bottom: 0px;
         margin-top: 0px;
@@ -450,6 +450,7 @@ h2 {
     /* Hamburger Menu Styles */
     .toggle-button {
         display: flex;
+        margin-top: 6px;
     }
 
     .navbar-links {
