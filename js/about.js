@@ -225,9 +225,10 @@ document.addEventListener('DOMContentLoaded', function () {
         clearFavorites();
     })
 
-    //Should run toggleModal function when clicking on the X button
-    const closeModalButton = document.querySelector('#closeModal');
-    closeModalButton.addEventListener('click', function () {
-        toggleModal();
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            toggleModal();
+            clearFavorites();
+        }
     })
 })
