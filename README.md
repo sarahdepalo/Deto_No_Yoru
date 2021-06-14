@@ -12,6 +12,27 @@ Each member of our team had been in a situation where hours had been spent debat
 
 ![gif of trending anime carousel](imgs/carousel.gif)
 
+## Code Example
+The following code uses the user-selected genre to fetch information from the jikan API. The array from the selected genre is then randomized. This same pattern was also used to fetch the random local restaurant.
+``` javascript
+    function fetchAnime(genre) {
+        fetch(`https://api.jikan.moe/v3/genre/anime/${genre}`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (animeList) {
+                randomizeAnime(animeList)
+
+            })
+            .catch(function (error) {
+                console.error("ERROR: ", error);
+            })
+    }
+
+    function randomizeAnime(animeList) {
+        const randomAnime = Math.floor(Math.random() * animeList.anime.length);
+```
+
 ## APIs Used
 * [Documenu](https://documenu.com/)
 * [Jikan](https://jikan.docs.apiary.io/#) 
