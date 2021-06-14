@@ -16,6 +16,10 @@ Each member of our team had been in a situation where hours had been spent debat
 * [Documenu](https://documenu.com/)
 * [Jikan](https://jikan.docs.apiary.io/#) 
 
+## Languages Used
+
+![picture of JS, CSS, and HTML icons](imgs/icons.png)
+
 ## Contributors
 
 * [Alyna Palamarchuk](https://github.com/alynapchuk)
