@@ -43,6 +43,6 @@ The following code uses the user-selected genre to fetch information from the ji
 
 ## Contributors
 
-* [Alyna Palamarchuk](https://github.com/alynapchuk)
-* [Sarah dePalo](https://github.com/sarahdepalo)
-* [Rodrigo Ruiz](https://github.com/Rodrigo-Ruiz1)
+* [Sarah dePalo](https://github.com/sarahdepalo) - Homepage JavaScript, Trending page JavaScript, HTML, and CSS
+* [Rodrigo Ruiz](https://github.com/Rodrigo-Ruiz1) - About JavaScript, HTML, and CSS
+* [Alyna Palamarchuk](https://github.com/alynapchuk) - Homepage HTML and CSS
