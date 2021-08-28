@@ -44,5 +44,5 @@ The following code uses the user-selected genre to fetch information from the ji
 ## Contributors
 
 * [Sarah dePalo](https://github.com/sarahdepalo) - Homepage JavaScript, Trending page JavaScript, HTML, and CSS
-* [Rodrigo Ruiz](https://github.com/Rodrigo-Ruiz1) - About JavaScript, HTML, and CSS
+* [Rodrigo Ruiz](https://github.com/Rodrigo-Ruiz1) - About page JavaScript, HTML, and CSS
 * [Alyna Palamarchuk](https://github.com/alynapchuk) - Homepage HTML and CSS
